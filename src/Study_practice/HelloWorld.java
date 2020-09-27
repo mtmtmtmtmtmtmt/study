@@ -9,7 +9,5 @@ public class HelloWorld {
         System.out.println("Hello,world!");
 
         //测试回退操作与查看master与origin_master的指向（test_02）
-
-        //测试回退操作在远程上传的情况下执行（test_03）
     }
 }
