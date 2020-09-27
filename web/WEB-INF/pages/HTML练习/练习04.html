@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<!--@author MT
+@create 2020-09-20-21:17 -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习04</title>
+    <style type="text/css">
+        table{
+            border: 1px black solid;
+            /*border-collapse: collapse;*/
+        }
+
+    </style>
+</head>
+<body>
+    练习04.1表单练习
+<!--表单form练习-->
+    <!--需求 1:创建一个个人信息注册的表单界面。包含用户名，密码，确认密码。性别（单选），兴趣爱好（多选），国籍（下拉列表）。 隐藏域，自我评价（多行文本域）。重置，提交。-->
+
+    <h1 align="center">用户注册</h1>
+<form action="http://localhost:8080" method="post">
+    <input type="hidden" name="action" value="login"/>
+    <table align="left">
+        <tr>
+            <td>用户名：</td><td><input type="text" value="请输入您的注册用户名"/><td><br/>
+        </tr>
+        <tr>
+            <td>密码：</td><td><input type="password"/></td><br/>
+        </tr>
+        <tr>
+            <td>确认密码：</td><td><input type="password"/></td><br/>
+        </tr>
+        <tr>
+            <td>选择性别：</td><td><input type="radio" value="男" name="sex" checked="checked"/>男
+            <input type="radio" value="女" name="sex"/>女</td><br/>
+        </tr>
+        <tr>
+            <td>选择爱好：</td><td><input type="checkbox" value="足球" checked="checked"/>足球
+            <input type="checkbox" value="篮球"/>篮球
+            <input type="checkbox" value="HTML"/>HTML</td><br>
+        </tr>
+        <tr>
+            <td>选择国家或地区：</td><td><select>
+            <option selected="selected">中国</option>
+            <option>中国台湾</option>
+            <option>中国香港</option>
+            <option>中国澳门</option>
+            <option>美国</option>
+            <option>JP国</option>
+            </select></td><br>
+        </tr>
+        <tr>
+            <td>自我评价：</td><td><textarea rows="10" cols="100">显示的默认值测试</textarea></td><br/>
+        </tr>
+        <tr>
+            <td><input type="submit" value="注册"></td><td><input type="reset" value="重置"/></td><br/>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

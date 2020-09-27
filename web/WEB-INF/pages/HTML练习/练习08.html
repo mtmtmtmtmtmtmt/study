@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+@author MT 
+@create 2020-09-21-17:16
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习08</title>
+    <link rel="stylesheet" type="text/css" href="../../CSS/css001.css">
+
+    <script type="text/javascript">
+        function onloadFun(){
+            alert("静态注册onload事件，所有代码就这么点了");
+        }
+        //onload事件动态注册，是固定的写法
+        window.onload = function(){
+            alert("动态注册的onload事件");
+        }
+    </script>
+    <script type="text/javascript" src="../../JS/JS002.js"></script>
+</head>
+
+<body>
+<h1>练习008，JS事件练习</h1>
+<button onclick="onclickFun();">按钮01</button><br/>
+<button id="button02">按钮02</button><br/>
+用户名：<input type="text" onblur="onblurFun();"/><br/>
+密码：<input type="password" id="password01"><br/>
+请选择你喜欢吃的零食:
+<select onchange="onchangeFun();">
+    <option>薯片</option>
+    <option>旺旺小小酥</option>
+    <option>巧克力</option>
+    <option>火腿肠</option>
+    <option>卫龙大面筋</option>
+</select><br/>
+请选择你喜欢喝的饮料:
+<select id="select_yinliao">
+    <option>百事可乐</option>
+    <option>旺仔牛奶</option>
+    <option>猛牛纯牛奶</option>
+    <option>脉动</option>
+    <option>柠檬茶</option>
+</select><br/>
+<form action="http://localhost:8080" method="get" onsubmit="onsubmitFun();">
+    <input type="submit" value="静态注册的submit"/>
+</form><br/>
+<form action="http://localhost:8080" method="get" id="form01">
+    <input type="submit" value="动态注册的submit"/>
+</form><br/>
+用户名：<input type="text" id="yonghuming"/>
+<span id="span_xiangying"></span><br/>
+<button id="button_jianyan" onclick="onclickFun_yanzheng();">检验</button><br/>
+请选择你喜欢吃的零食：
+<input type="checkbox" name="lingshi" value="薯片">薯片
+<input type="checkbox" name="lingshi" value="旺旺小小酥">旺旺小小酥
+<input type="checkbox" name="lingshi" value="火腿肠">火腿肠
+<input type="checkbox" name="lingshi" value="巧克力">巧克力
+<input type="checkbox" name="lingshi" value="卫龙大面筋">卫龙大面筋<br/>
+
+<button id="button_quanxuan" onclick="checkAllFun();">全选</button>
+<button id="button_quanbuxuan" onclick="AllNoCheckFun();">全不选</button>
+<button id="fanxuan" onclick="checkReverseFun();">反选</button><br/>
+
+</body>
+</html>

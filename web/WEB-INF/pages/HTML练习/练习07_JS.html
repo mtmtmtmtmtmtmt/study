@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+@author MT 
+@create 2020-09-21-15:44
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习07</title>
+    <link rel="stylesheet" type="text/css" href="../../CSS/css001.css">
+    <!--在<script>标签中用src引入.js文件载入JavaScript代码-->
+    <script type="text/javascript" src="../../JS/JS001.js"></script>
+    <script type="text/javascript">
+        alert("Hello,JavaScript");
+        /*JS的变量可以是数值、字符串、数组、甚至是对象*/
+        var a = 0;
+        var b ="abcdefg";
+        alert(a || b);
+
+        var 数组 =[true,0];
+        alert(数组.length);
+
+        /*function*/
+        function sum(num1,num2) {
+            var result = num1 + num2;
+            return result;
+        }
+        alert( sum(100,50) );
+
+        /*function中的可变长参数arguments，直接写就行*/
+        function fun(a) {
+            alert( arguments.length );// 可 看 参 数 个 数
+            alert( arguments[0] );
+            alert( arguments[1] );
+            alert( arguments[2] );
+            /*alert("a = " + a);
+            for (var i = 0; i < arguments.length; i++){
+                alert( arguments[i] );
+            }
+            alert("无参函数 fun()");*/
+        }
+        fun(1,"ad",true);
+
+        /*JS中以变量形式定义一个对象*/
+        var obj = new Object();
+        obj.name = "华仔"; obj.age = 18;
+        obj.fun = function () {
+            alert("姓名：" + this.name + " , 年龄：" + this.age);
+        }
+        alert("这是Obj.age:" + obj.age);
+        obj.fun();
+
+        /*还可以以花括号的形式定义对象*/
+        var obj = {
+            name:"富成",
+            age:18,
+            fun : function () {
+                alert("姓名：" + this.name + " , 年龄：" + this.age);
+            }
+        };
+        alert(obj.name);
+        obj.fun();
+
+
+
+    </script>
+</head>
+<body>
+<h1>练习07——JS练习</h1>
+</body>
+</html>

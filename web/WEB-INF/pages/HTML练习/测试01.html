@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+@author MT 
+@create 2020-09-21-20:19
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试01</title>
+    <script type="text/javascript">
+        function onclickFun() {
+            alert("静态注册 onclick 事件");
+        }
+    //动 态 注 册 onclick事 件
+        window.onload = function () {
+            /*1 获 取 标 签 对 象
+            document 是 JavaScript 语 言 提 供 的 一 个 对 象 （ 文 档 ） <br/>
+            get 获 取 * Element 元 素 （ 就 是 标 签 ）
+            By 通 过 。 。 由 。 。 经 。 。 。 * Id id 属 性
+
+            getElementById 通 过 id 属 性 获 取 标 签 对 象*/
+
+            var btnObj = document.getElementById("btn01");
+            // alert( btnObj );
+            // 2 通 过 标 签 对 象 . 事 件 名 = function(){}
+            btnObj.onclick = function () {
+                alert("动态注册的 onclick 事件");
+            }
+        }
+    </script>
+</head>
+<body>
+<!-静 态 注 册 onClick 事 件 -->
+<button onclick="onclickFun();">按钮 1</button> <br/>
+<button id="btn01">按钮 2</button><br/>
+</body>
+</html>
