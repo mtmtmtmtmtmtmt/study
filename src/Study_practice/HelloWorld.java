@@ -11,5 +11,7 @@ public class HelloWorld {
         //测试回退操作与查看master与origin_master的指向（test_02）
 
         //测试新建分支修改
+
+        //测试将在Study_01分支上进行的修改合并到主分支中
     }
 }
