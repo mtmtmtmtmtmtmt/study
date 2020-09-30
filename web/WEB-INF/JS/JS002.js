@@ -17,6 +17,7 @@ function onblurFun(){
 /*后面写的window.onload()事件会覆盖掉之前的window.onload()事件*/
 window.onload = function(){
     var passwordObj = document.getElementById("password01");
+    alert(passwordObj);
     passwordObj.onblur = function(){
         console.log("这是动态注册的失去焦点事件，通过JS提供的console.log向控制台打印信息");
     }
